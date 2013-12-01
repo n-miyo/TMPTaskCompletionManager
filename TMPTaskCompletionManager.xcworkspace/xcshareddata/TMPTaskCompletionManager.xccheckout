@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8158EE07-5E40-4E51-9D80-28F994618BE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TMPTaskCompletionManager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C7722D39-B3CD-4972-9C26-AE2CC20E30C2</key>
+		<string>ssh://github.com/n-miyo/TMPTaskCompletionManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TMPTaskCompletionManager.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C7722D39-B3CD-4972-9C26-AE2CC20E30C2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/n-miyo/TMPTaskCompletionManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C7722D39-B3CD-4972-9C26-AE2CC20E30C2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C7722D39-B3CD-4972-9C26-AE2CC20E30C2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TMPTaskCompletionManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>

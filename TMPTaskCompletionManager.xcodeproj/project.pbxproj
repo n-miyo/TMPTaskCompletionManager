@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47C6DA2D184AF6A50094C988 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA2C184AF6A50094C988 /* Foundation.framework */; };
+		47C6DA2F184AF6A50094C988 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA2E184AF6A50094C988 /* CoreGraphics.framework */; };
+		47C6DA31184AF6A50094C988 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA30184AF6A50094C988 /* UIKit.framework */; };
+		47C6DA37184AF6A50094C988 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C6DA35184AF6A50094C988 /* InfoPlist.strings */; };
+		47C6DA39184AF6A50094C988 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6DA38184AF6A50094C988 /* main.m */; };
+		47C6DA3D184AF6A50094C988 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6DA3C184AF6A50094C988 /* AppDelegate.m */; };
+		47C6DA40184AF6A50094C988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C6DA3E184AF6A50094C988 /* Main.storyboard */; };
+		47C6DA43184AF6A50094C988 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6DA42184AF6A50094C988 /* ViewController.m */; };
+		47C6DA45184AF6A50094C988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C6DA44184AF6A50094C988 /* Images.xcassets */; };
+		47C6DA4C184AF6A60094C988 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA4B184AF6A50094C988 /* XCTest.framework */; };
+		47C6DA4D184AF6A60094C988 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA2C184AF6A50094C988 /* Foundation.framework */; };
+		47C6DA4E184AF6A60094C988 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6DA30184AF6A50094C988 /* UIKit.framework */; };
+		47C6DA56184AF6A60094C988 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C6DA54184AF6A60094C988 /* InfoPlist.strings */; };
+		47C6DA64184AF6F20094C988 /* TMPTaskCompletionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6DA63184AF6F20094C988 /* TMPTaskCompletionManager.m */; };
+		47C6DA66184AF7E20094C988 /* TMPTaskCompletionManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6DA65184AF7E20094C988 /* TMPTaskCompletionManagerSpec.m */; };
+		998988CC16E04FBE91DCD343 /* libPods-TMPTaskCompletionManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8940889DAE194F22A2CEAF14 /* libPods-TMPTaskCompletionManagerTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47C6DA4F184AF6A60094C988 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47C6DA21184AF6A50094C988 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47C6DA28184AF6A50094C988;
+			remoteInfo = TMPTaskCompletionManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47C6DA29184AF6A50094C988 /* TMPTaskCompletionManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMPTaskCompletionManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C6DA2C184AF6A50094C988 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47C6DA2E184AF6A50094C988 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47C6DA30184AF6A50094C988 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47C6DA34184AF6A50094C988 /* TMPTaskCompletionManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMPTaskCompletionManager-Info.plist"; sourceTree = "<group>"; };
+		47C6DA36184AF6A50094C988 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47C6DA38184AF6A50094C988 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47C6DA3A184AF6A50094C988 /* TMPTaskCompletionManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMPTaskCompletionManager-Prefix.pch"; sourceTree = "<group>"; };
+		47C6DA3B184AF6A50094C988 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		47C6DA3C184AF6A50094C988 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		47C6DA3F184AF6A50094C988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47C6DA41184AF6A50094C988 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		47C6DA42184AF6A50094C988 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		47C6DA44184AF6A50094C988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47C6DA4A184AF6A50094C988 /* TMPTaskCompletionManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMPTaskCompletionManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C6DA4B184AF6A50094C988 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		47C6DA53184AF6A60094C988 /* TMPTaskCompletionManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMPTaskCompletionManagerTests-Info.plist"; sourceTree = "<group>"; };
+		47C6DA55184AF6A60094C988 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47C6DA62184AF6F20094C988 /* TMPTaskCompletionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPTaskCompletionManager.h; sourceTree = "<group>"; };
+		47C6DA63184AF6F20094C988 /* TMPTaskCompletionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPTaskCompletionManager.m; sourceTree = "<group>"; };
+		47C6DA65184AF7E20094C988 /* TMPTaskCompletionManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPTaskCompletionManagerSpec.m; sourceTree = "<group>"; };
+		6A5BA5D3E3B84C349C0A1A3A /* Pods-TMPTaskCompletionManagerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMPTaskCompletionManagerTests.xcconfig"; path = "Pods/Pods-TMPTaskCompletionManagerTests.xcconfig"; sourceTree = "<group>"; };
+		8940889DAE194F22A2CEAF14 /* libPods-TMPTaskCompletionManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMPTaskCompletionManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47C6DA26184AF6A50094C988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA2F184AF6A50094C988 /* CoreGraphics.framework in Frameworks */,
+				47C6DA31184AF6A50094C988 /* UIKit.framework in Frameworks */,
+				47C6DA2D184AF6A50094C988 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C6DA47184AF6A50094C988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA4C184AF6A60094C988 /* XCTest.framework in Frameworks */,
+				47C6DA4E184AF6A60094C988 /* UIKit.framework in Frameworks */,
+				47C6DA4D184AF6A60094C988 /* Foundation.framework in Frameworks */,
+				998988CC16E04FBE91DCD343 /* libPods-TMPTaskCompletionManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47C6DA20184AF6A50094C988 = {
+			isa = PBXGroup;
+			children = (
+				47C6DA61184AF6E20094C988 /* Lib */,
+				47C6DA32184AF6A50094C988 /* TMPTaskCompletionManager */,
+				47C6DA51184AF6A60094C988 /* TMPTaskCompletionManagerTests */,
+				47C6DA2B184AF6A50094C988 /* Frameworks */,
+				47C6DA2A184AF6A50094C988 /* Products */,
+				6A5BA5D3E3B84C349C0A1A3A /* Pods-TMPTaskCompletionManagerTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		47C6DA2A184AF6A50094C988 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA29184AF6A50094C988 /* TMPTaskCompletionManager.app */,
+				47C6DA4A184AF6A50094C988 /* TMPTaskCompletionManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47C6DA2B184AF6A50094C988 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA2C184AF6A50094C988 /* Foundation.framework */,
+				47C6DA2E184AF6A50094C988 /* CoreGraphics.framework */,
+				47C6DA30184AF6A50094C988 /* UIKit.framework */,
+				47C6DA4B184AF6A50094C988 /* XCTest.framework */,
+				8940889DAE194F22A2CEAF14 /* libPods-TMPTaskCompletionManagerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47C6DA32184AF6A50094C988 /* TMPTaskCompletionManager */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA3B184AF6A50094C988 /* AppDelegate.h */,
+				47C6DA3C184AF6A50094C988 /* AppDelegate.m */,
+				47C6DA3E184AF6A50094C988 /* Main.storyboard */,
+				47C6DA41184AF6A50094C988 /* ViewController.h */,
+				47C6DA42184AF6A50094C988 /* ViewController.m */,
+				47C6DA44184AF6A50094C988 /* Images.xcassets */,
+				47C6DA33184AF6A50094C988 /* Supporting Files */,
+			);
+			path = TMPTaskCompletionManager;
+			sourceTree = "<group>";
+		};
+		47C6DA33184AF6A50094C988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA34184AF6A50094C988 /* TMPTaskCompletionManager-Info.plist */,
+				47C6DA35184AF6A50094C988 /* InfoPlist.strings */,
+				47C6DA38184AF6A50094C988 /* main.m */,
+				47C6DA3A184AF6A50094C988 /* TMPTaskCompletionManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C6DA51184AF6A60094C988 /* TMPTaskCompletionManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA65184AF7E20094C988 /* TMPTaskCompletionManagerSpec.m */,
+				47C6DA52184AF6A60094C988 /* Supporting Files */,
+			);
+			path = TMPTaskCompletionManagerTests;
+			sourceTree = "<group>";
+		};
+		47C6DA52184AF6A60094C988 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA53184AF6A60094C988 /* TMPTaskCompletionManagerTests-Info.plist */,
+				47C6DA54184AF6A60094C988 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C6DA61184AF6E20094C988 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				47C6DA62184AF6F20094C988 /* TMPTaskCompletionManager.h */,
+				47C6DA63184AF6F20094C988 /* TMPTaskCompletionManager.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47C6DA28184AF6A50094C988 /* TMPTaskCompletionManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C6DA5B184AF6A60094C988 /* Build configuration list for PBXNativeTarget "TMPTaskCompletionManager" */;
+			buildPhases = (
+				47C6DA25184AF6A50094C988 /* Sources */,
+				47C6DA26184AF6A50094C988 /* Frameworks */,
+				47C6DA27184AF6A50094C988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMPTaskCompletionManager;
+			productName = TMPTaskCompletionManager;
+			productReference = 47C6DA29184AF6A50094C988 /* TMPTaskCompletionManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47C6DA49184AF6A50094C988 /* TMPTaskCompletionManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C6DA5E184AF6A60094C988 /* Build configuration list for PBXNativeTarget "TMPTaskCompletionManagerTests" */;
+			buildPhases = (
+				FA5A47781F884902A6D50693 /* Check Pods Manifest.lock */,
+				47C6DA46184AF6A50094C988 /* Sources */,
+				47C6DA47184AF6A50094C988 /* Frameworks */,
+				47C6DA48184AF6A50094C988 /* Resources */,
+				CEBDF4F7CE574AF49328F236 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47C6DA50184AF6A60094C988 /* PBXTargetDependency */,
+			);
+			name = TMPTaskCompletionManagerTests;
+			productName = TMPTaskCompletionManagerTests;
+			productReference = 47C6DA4A184AF6A50094C988 /* TMPTaskCompletionManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47C6DA21184AF6A50094C988 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Tempus.ORG;
+				TargetAttributes = {
+					47C6DA49184AF6A50094C988 = {
+						TestTargetID = 47C6DA28184AF6A50094C988;
+					};
+				};
+			};
+			buildConfigurationList = 47C6DA24184AF6A50094C988 /* Build configuration list for PBXProject "TMPTaskCompletionManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47C6DA20184AF6A50094C988;
+			productRefGroup = 47C6DA2A184AF6A50094C988 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47C6DA28184AF6A50094C988 /* TMPTaskCompletionManager */,
+				47C6DA49184AF6A50094C988 /* TMPTaskCompletionManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47C6DA27184AF6A50094C988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA45184AF6A50094C988 /* Images.xcassets in Resources */,
+				47C6DA37184AF6A50094C988 /* InfoPlist.strings in Resources */,
+				47C6DA40184AF6A50094C988 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C6DA48184AF6A50094C988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA56184AF6A60094C988 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CEBDF4F7CE574AF49328F236 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-TMPTaskCompletionManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA5A47781F884902A6D50693 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47C6DA25184AF6A50094C988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA43184AF6A50094C988 /* ViewController.m in Sources */,
+				47C6DA3D184AF6A50094C988 /* AppDelegate.m in Sources */,
+				47C6DA64184AF6F20094C988 /* TMPTaskCompletionManager.m in Sources */,
+				47C6DA39184AF6A50094C988 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C6DA46184AF6A50094C988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C6DA66184AF7E20094C988 /* TMPTaskCompletionManagerSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47C6DA50184AF6A60094C988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47C6DA28184AF6A50094C988 /* TMPTaskCompletionManager */;
+			targetProxy = 47C6DA4F184AF6A60094C988 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47C6DA35184AF6A50094C988 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C6DA36184AF6A50094C988 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47C6DA3E184AF6A50094C988 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C6DA3F184AF6A50094C988 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47C6DA54184AF6A60094C988 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C6DA55184AF6A60094C988 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47C6DA59184AF6A60094C988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47C6DA5A184AF6A60094C988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47C6DA5C184AF6A60094C988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMPTaskCompletionManager/TMPTaskCompletionManager-Prefix.pch";
+				INFOPLIST_FILE = "TMPTaskCompletionManager/TMPTaskCompletionManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47C6DA5D184AF6A60094C988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMPTaskCompletionManager/TMPTaskCompletionManager-Prefix.pch";
+				INFOPLIST_FILE = "TMPTaskCompletionManager/TMPTaskCompletionManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47C6DA5F184AF6A60094C988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5BA5D3E3B84C349C0A1A3A /* Pods-TMPTaskCompletionManagerTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TMPTaskCompletionManager.app/TMPTaskCompletionManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMPTaskCompletionManager/TMPTaskCompletionManager-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TMPTaskCompletionManagerTests/TMPTaskCompletionManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		47C6DA60184AF6A60094C988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5BA5D3E3B84C349C0A1A3A /* Pods-TMPTaskCompletionManagerTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TMPTaskCompletionManager.app/TMPTaskCompletionManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMPTaskCompletionManager/TMPTaskCompletionManager-Prefix.pch";
+				INFOPLIST_FILE = "TMPTaskCompletionManagerTests/TMPTaskCompletionManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47C6DA24184AF6A50094C988 /* Build configuration list for PBXProject "TMPTaskCompletionManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C6DA59184AF6A60094C988 /* Debug */,
+				47C6DA5A184AF6A60094C988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C6DA5B184AF6A60094C988 /* Build configuration list for PBXNativeTarget "TMPTaskCompletionManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C6DA5C184AF6A60094C988 /* Debug */,
+				47C6DA5D184AF6A60094C988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C6DA5E184AF6A60094C988 /* Build configuration list for PBXNativeTarget "TMPTaskCompletionManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C6DA5F184AF6A60094C988 /* Debug */,
+				47C6DA60184AF6A60094C988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47C6DA21184AF6A50094C988 /* Project object */;
+}
