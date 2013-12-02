@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name                  = 'TMPTaskCompletionManager'
   s.version               = '1.0.0'
-  s.summary               = 'UISegmentedControl which is able to detect already selected segment touch.'
+  s.summary               = 'for supporting task completion, especially for multiple background tasks.'
   s.homepage              = 'https://github.com/n-miyo/TMPTaskCompletionManager'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'MIYOKAWA, Nobuyoshi' => 'n-miyo@Tempus.ORG' }
