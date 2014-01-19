@@ -8,6 +8,8 @@
 @property (nonatomic) NSMutableArray *taskIdentifiers;
 @property (nonatomic) NSMutableArray *eTasks;
 @property (nonatomic) NSOperationQueue *defaultTaskQueue;
+
+- (void)applicationWillTerminate;
 @end
 
 SPEC_BEGIN(TMPTaskCompletionManagerSpec)
@@ -96,6 +98,109 @@ describe(@"TMPTaskCompletionManagerSpec", ^{
         [[taskCompletion.taskIdentifiers[1] should] equal:@(btid)];
         [[theValue([taskCompletion.eTasks count])
              should] equal:theValue(2)];
+    });
+  });
+
+  context(@"for calling runBackgroundOperation:taskQueue:expirationTask", ^{
+    __block TMPTaskCompletionManager *taskCompletion;
+
+    beforeEach(^{
+        taskCompletion = [TMPTaskCompletionManager sharedManager];
+        taskCompletion.taskIdentifiers = nil;
+        taskCompletion.eTasks = nil;
+      });
+
+    it(@"should cancel eTask if operation finished correctly.", ^{
+        taskCompletion.defaultTaskQueue = [NSOperationQueue new];
+
+        __block NSString *o0Expired = nil;
+        NSBlockOperation *o0 =
+          [NSBlockOperation blockOperationWithBlock:^{
+              [NSThread sleepForTimeInterval:1];
+              o0Expired = @"done";
+            }];
+        task_t e0 = ^{o0Expired = @"expired";};
+
+        __block NSString *o1Expired = nil;
+        NSBlockOperation *o1 =
+          [NSBlockOperation blockOperationWithBlock:^{
+              [NSThread sleepForTimeInterval:3];
+              o1Expired = @"done";
+            }];
+        task_t e1 = ^{o1Expired = @"expired";};
+
+        UIBackgroundTaskIdentifier btid;
+        btid = [taskCompletion
+          runBackgroundOperation:o0
+                       taskQueue:nil
+                  expirationTask:e0];
+        [[theValue([taskCompletion.taskIdentifiers count])
+             should] equal:theValue(1)];
+        [[taskCompletion.taskIdentifiers[0] should] equal:@(btid)];
+        [[theValue([taskCompletion.eTasks count])
+             should] equal:theValue(1)];
+
+        btid = [taskCompletion
+          runBackgroundOperation:o1
+                  taskQueue:nil
+             expirationTask:e1];
+        [[theValue([taskCompletion.taskIdentifiers count])
+             should] equal:theValue(2)];
+        [[taskCompletion.taskIdentifiers[1] should] equal:@(btid)];
+        [[theValue([taskCompletion.eTasks count])
+             should] equal:theValue(2)];
+
+        [[expectFutureValue(theValue([taskCompletion.eTasks count]))
+             shouldEventuallyBeforeTimingOutAfter(2.0)]
+          equal:theValue(1)];
+        [[expectFutureValue(o0Expired)
+             shouldEventuallyBeforeTimingOutAfter(2.0)]
+          equal:@"done"];
+
+        [[expectFutureValue(theValue([taskCompletion.eTasks count]))
+             shouldEventuallyBeforeTimingOutAfter(4.0)]
+          equal:theValue(0)];
+        [[expectFutureValue(o1Expired)
+             shouldEventuallyBeforeTimingOutAfter(4.0)]
+          equal:@"done"];
+    });
+
+    it(@"should invoke eTask if operation did not finish.", ^{
+        taskCompletion.defaultTaskQueue = [NSOperationQueue new];
+
+        __block NSString *o0Expired = nil;
+        NSBlockOperation *o0 =
+          [NSBlockOperation blockOperationWithBlock:^{
+              [NSThread sleepForTimeInterval:5];
+              o0Expired = @"done";
+            }];
+        task_t e0 = ^{o0Expired = @"expired";};
+
+        __block NSString *o1Expired = nil;
+        NSBlockOperation *o1 =
+          [NSBlockOperation blockOperationWithBlock:^{
+              [NSThread sleepForTimeInterval:5];
+              o1Expired = @"done";
+            }];
+        task_t e1 = ^{o1Expired = @"expired";};
+
+        [taskCompletion
+          runBackgroundOperation:o0
+                       taskQueue:nil
+                  expirationTask:e0];
+        [taskCompletion
+          runBackgroundOperation:o1
+                  taskQueue:nil
+             expirationTask:e1];
+
+        [taskCompletion applicationWillTerminate];
+
+        [[expectFutureValue(o0Expired)
+             shouldEventually]
+          equal:@"expired"];
+        [[expectFutureValue(o1Expired)
+             shouldEventually]
+          equal:@"expired"];
     });
   });
 

@@ -56,6 +56,26 @@
                                  expirationTask:(void (^)(void))expirationTask;
 
 /**
+ Register the specified operation to run on the specified or default
+ queue for background execution.  Same as
+ 'runBackgroundTask:taskQueue:expirationTask:', but this method can
+ accept NSOperation instead of block as the task.
+
+ @param operation A operation which runs in background.  This task is
+ invoked on 'taskQueue' or defaultQueue.
+ @param taskQueue A queue on which runs 'operation'.  If the value is
+ nil, system automatically assigns default queue.
+ @param expirationTask A task which runs if the task is not completed
+ before allowed background second is expired.
+
+ @return A unique identifier which is returned from system.
+ */
+- (UIBackgroundTaskIdentifier)
+runBackgroundOperation:(NSOperation *)operation
+             taskQueue:(NSOperationQueue *)taskQueue
+        expirationTask:(void (^)(void))expirationTask;
+
+/**
  Unregister the task, which is specified with identifier, from
  background execution.  You have to call this method if the task does
  not need to run in background.

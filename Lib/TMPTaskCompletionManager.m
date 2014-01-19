@@ -27,6 +27,7 @@ typedef void (^task_t)();
 @interface TMPTaskCompletionManager()
 @property (nonatomic) NSMutableArray *taskIdentifiers;
 @property (nonatomic) NSMutableArray *eTasks;
+@property (nonatomic) NSMutableDictionary *kvoAssigners;
 @property (nonatomic) NSOperationQueue *defaultTaskQueue;
 @end
 
@@ -50,6 +51,15 @@ typedef void (^task_t)();
   }
 
   return _eTasks;
+}
+
+- (NSMutableDictionary *)kvoAssigners
+{
+  if (!_kvoAssigners) {
+    _kvoAssigners = [NSMutableDictionary new];
+  }
+
+  return _kvoAssigners;
 }
 
 - (NSOperationQueue *)defaultTaskQueue
@@ -94,6 +104,9 @@ typedef void (^task_t)();
     removeObserver:self
               name:UIApplicationWillTerminateNotification
             object:nil];
+  for (NSOperation *op in [self.kvoAssigners allValues]) {
+    [op removeObserver:self forKeyPath:@"isFinished"];
+  }
 }
 
 #pragma mark - public
@@ -132,6 +145,43 @@ typedef void (^task_t)();
   return identifier;
 }
 
+- (UIBackgroundTaskIdentifier)
+runBackgroundOperation:(NSOperation *)operation
+             taskQueue:(NSOperationQueue *)taskQueue
+        expirationTask:(void (^)(void))expirationTask
+{
+  __block UIBackgroundTaskIdentifier identifier;
+  UIApplication *application = [UIApplication sharedApplication];
+  task_t eTask = ^{
+    if ([self.taskIdentifiers containsObject:@(identifier)]) {
+      if (expirationTask) {
+        expirationTask();
+      }
+      [self cancelBackgroundTask:identifier];
+    }
+  };
+  identifier = [application beginBackgroundTaskWithExpirationHandler:eTask];
+  [self.eTasks addObject:eTask];
+  [self.taskIdentifiers addObject:@(identifier)];
+
+  if (operation) {
+    [operation
+      addObserver:self
+       forKeyPath:@"isFinished"
+          options:NSKeyValueObservingOptionNew
+          context:(__bridge void *)
+      (@{@"operation": operation, @"identifier": @(identifier)})];
+    self.kvoAssigners[@(identifier)] = operation;
+    if (taskQueue) {
+      [taskQueue addOperation:operation];
+    } else {
+      [self.defaultTaskQueue addOperation:operation];
+    }
+  }
+
+  return identifier;
+}
+
 - (void)cancelBackgroundTask:(UIBackgroundTaskIdentifier)identifier
 {
   UIApplication *application = [UIApplication sharedApplication];
@@ -164,6 +214,22 @@ typedef void (^task_t)();
 {
   for (NSInteger i = 0; i < [self.eTasks count]; i++) {
     ((task_t)self.eTasks[i])();
+  }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+  if ([keyPath isEqualToString:@"isFinished"]) {
+    NSDictionary *d = (__bridge NSDictionary *)context;
+    NSNumber *identifier = d[@"identifier"];
+    [d[@"operation"] removeObserver:self forKeyPath:@"isFinished"];
+    [self.kvoAssigners removeObjectForKey:identifier];
+    [self cancelBackgroundTask:[identifier unsignedLongValue]];
   }
 }
 
