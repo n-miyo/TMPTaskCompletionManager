@@ -169,8 +169,8 @@ runBackgroundOperation:(NSOperation *)operation
       addObserver:self
        forKeyPath:@"isFinished"
           options:NSKeyValueObservingOptionNew
-          context:(__bridge void *)
-      (@{@"operation": operation, @"identifier": @(identifier)})];
+          context:(void *)CFBridgingRetain(
+            @{@"operation": operation, @"identifier": @(identifier)})];
     self.kvoAssigners[@(identifier)] = operation;
     if (taskQueue) {
       [taskQueue addOperation:operation];
@@ -225,7 +225,7 @@ runBackgroundOperation:(NSOperation *)operation
                        context:(void *)context
 {
   if ([keyPath isEqualToString:@"isFinished"]) {
-    NSDictionary *d = (__bridge NSDictionary *)context;
+    NSDictionary *d = CFBridgingRelease(context);
     NSNumber *identifier = d[@"identifier"];
     [d[@"operation"] removeObserver:self forKeyPath:@"isFinished"];
     [self.kvoAssigners removeObjectForKey:identifier];
